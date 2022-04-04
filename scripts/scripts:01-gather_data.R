@@ -17,7 +17,7 @@ library(haven)
 library(tidyverse)
 library(pdftools)
 # Read in the raw data. 
-raw_data <- pdf_text("/Users/aauveek/Documents/stats/304/paper4/inputs/data/socioeconomy_mortality.pdf") 
+raw_data <- pdf_text("/Users/aauveek/Documents/stats/304/SocioEconomicChildMortality/inputs/data/socioeconomy_mortality.pdf") 
 raw_data_list <- strsplit(raw_data, split = "\n")
 raw_data_array <- raw_data_list[[1]]
 
@@ -25,7 +25,7 @@ data_rows <- raw_data_array[22:49]
 
 raw_data_frame <- data.frame(data_rows)
 
-write.csv(raw_data_frame, "/Users/aauveek/Documents/stats/304/paper4/inputs/data/raw_data.csv")
+write.csv(raw_data_frame, "/Users/aauveek/Documents/stats/304/SocioEconomicChildMortality/inputs/data/raw_data.csv")
 
 
 

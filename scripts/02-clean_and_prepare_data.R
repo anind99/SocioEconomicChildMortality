@@ -19,7 +19,7 @@ library(ggplot2)
 library(reshape2)
 library(kableExtra)
 # Read in the raw data. 
-raw_data_frame <- readr::read_csv("/Users/aauveek/Documents/stats/304/paper4/inputs/data/raw_data.csv")["data_rows"]
+raw_data_frame <- readr::read_csv("/Users/aauveek/Documents/stats/304/SocioEconomicChildMortality/inputs/data/raw_data.csv")["data_rows"]
 
 ## Reading as rows instead of columns
 # df <- data.frame(matrix(ncol = 6, nrow = 0))
@@ -66,7 +66,7 @@ tsplit <- strsplit(raw_data_frame[25,1][1,1]$data_rows, "\\s{1,}")[[1]]
 df["Both antenatal and delivery care"] <- tsplit[3:7]
 
 
-write.csv(df, "/Users/aauveek/Documents/stats/304/paper4/inputs/data/cleaned_data.csv")
+write.csv(df, "/Users/aauveek/Documents/stats/304/SocioEconomicChildMortality/inputs/data/cleaned_data.csv")
 
 
 
