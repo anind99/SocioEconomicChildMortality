@@ -5,7 +5,7 @@ subtitle: "https://github.com/anind99/SocioEconomicChildMortality"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output: pdf_document
 bibliography: references.bib
-abstract: The society we live in is not fair. The livelihood of humans depends on their socioeconomic circumstances. While advancement in science has reduced this gap in livelihood regarding healthcare; there remains a stark contrast between those in higher and lower income classes. A key indicator of livelihood regarding health is infant mortality rates. Studying this, the paper by Schell et al. (2007), found that socioeconomic factors can account for 92% of the variability in Infant Mortality Rates. Consequently, in this paper I explored the effect of socioeconomic factors on child mortality rates specifically within the country of Nepal. I hypothesized that the factors associated with higher income will lead to lesser mortality rates. The results confirmed by belief. However, the data I used was not sufficient to conduct an in-depth analysis. Future studies should use extensive data on the individual level to determine as many socioeconomic factors that are related to child mortality rates as possible.
+abstract: The society we live in is not fair. The livelihood of humans depends on their socioeconomic circumstances. While advancement in science has reduced this gap in livelihood; there remains a stark contrast between those in higher and lower income classes. Health is a major aspect of livelihood and a key indicator of the health of a population is infant mortality rates. Studying this, the paper by Schell et al. (2007) found that socioeconomic factors can account for 92% of the variability in Infant Mortality Rates. Consequently, in this paper I explored the effect of socioeconomic factors on child mortality rates specifically within the country of Nepal. I hypothesized that the socioeconomic factors associated with higher income will lead to lesser mortality rates. The results confirmed by belief. Children with mother’s that have a secondary or higher level of education have lower mortality rates than children with mother that have no education. In addition, urban areas have lower child mortality rates than rural areas. However, the data I used was not sufficient to conduct an in-depth analysis. Future studies should use extensive data on the individual level to determine as many socioeconomic factors that are related to child mortality rates as possible.
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
@@ -27,21 +27,22 @@ library(kableExtra)
 
 # Introduction
 
-Throughout the last few centuries humanity has made leaps in scientific advancements. This has allowed society to develop into the productive and intricate system that we live in. More importantly it has improved the quality of life for humans. Previously difficult to attain resources such as food, water, heat, and shelter are now readily available. However, one of the greatest impacts of scientific development for humans was medicinal advancement and its accessibility. We, as a society, have been able to move past previously devastating illness such as the plague and flu; ultimately increasing the human life span. 
+Throughout the last few centuries humanity has made leaps in scientific advancements. This has allowed society to develop into the productive and intricate system that we live in today. More importantly it has improved the quality of life for humans. Previously difficult to attain resources such as food, water, heat, and shelter are now readily available. However, one of the greatest impacts of scientific development for humans was medicinal advancement and its accessibility. We, as a society, have been able to move past previously devastating illness such as the plague and flu; ultimately increasing the human life span. 
 
-While the advancement of medicine has improved life in general for humans, unfortunately it has not had the same effect for everyone. Although a privileged individual may want to deny it, the society that we live in is unfair. For the purpose of increasing capital, countries and people have an unequal income distribution. On the micro level, for lower income countries this has an effect their living standards and other socioeconomic factors. These socioeconomic factors in turn also effect the health of the population. Consequently, in this paper I will study the effect of socioeconomic factors in the mortality rate of infants in Nepal. Nepal being a lower income country will allow us to predict distal factors that may affect individuals who lack financial security.
+While the advancement of medicine has improved life in general for humans, unfortunately it has not had the same effect for everyone. Although a privileged individual may want to deny it, the society that we live in is unfair. For the purpose of increasing capital, countries and people have unequal living conditions. These unequal living conditions result in vastly different socioeconomic factors which in turn also effect the health of the population. Consequently, in this paper I will study the effect of socioeconomic factors in the mortality rate of children in Nepal. Nepal being a lower income country will allow us to predict distal socioeconomic factors that may affect individuals who lack financial security.
 
 In the paper by [@1], they have mentioned that for the purpose of reaching development goals, influential bodies advocate for resource allocation towards the health sector. They state that a major identifier of population health is Infant Mortality Rate (IMR). The WHO suggested that increased spending in the health sector will show a significant reduction in IMR. However other studies have found that socioeconomic progress (nutrition, housing, hygiene, education, gender equality, and human rights) are more important. Hence, in their paper [@1] set out to determine the impact of 5 specific socioeconomic variables (GNI/capita, poverty rate, income equality, young female illiteracy rate) on the variation of national IMR at the global level. While gross national income (GNI) predicts IMR, it doesn’t provide policy makers clear guidance on how to reduce mortality.
 
 The result of the finding show that 3 socioeconomic variables predicted 92% of the variation of national IMR the global level. Overall, as expected, GNI was the strongest determinant. However, this doesn’t provide direct reasons why infant mortality is caused. [@1] also found the young female illiteracy rate played a major part in the IMR of lower- and middle-income countries; most effective in the former. In addition, income distribution played a major part in middle income countries. High income countries showed no significant association between socio-economic factors and IMR; emphasizing the unjust fact that income is a major determinant of health. 
 
-[@1] concluded that contradictory to WHO’s statement, crude macro measurements such as public health spending do not have an independent effect on health gains. Specific factors such as female illiteracy contribute more to child survival. To extent this study, I used data collected by the ministry of health in Nepal [@D1] to determine the effect of socioeconomic factors on health specifically in Nepal. The data contains the MORTALITY RATE of infants of different age groups and is aggregated by socioeconomic factors. I hypothesized that there will be a significant effect by socioeconomic variables on child mortality rates in Nepal. More specifically, socioeconomic factors associated with lower income will lead to higher child mortality.
+Schell et al. (2007) concluded that contradictory to WHO’s statement, crude macro measurements such as public health spending do not have an independent effect on health gains. Specific factors such as female illiteracy contribute more to child survival. To extent this study, I used data collected by the ministry of health in Nepal [@D1] to determine the effect of socioeconomic factors on health specifically in Nepal. The data contains the mortality rate of children of different age groups and is aggregated by socioeconomic factors. I hypothesized that there will be a significant effect by socioeconomic variables on child mortality rates in Nepal. More specifically, socioeconomic factors associated with lower income will lead to higher child mortality.
 
-The results suggest that in Nepal there is indeed an inequality in MORTALITY RATE between individuals with different socioeconomic circumstances. While the data I used doesn’t capture many factors on an individual level, it provides an initial look on gap in health between people within Nepal. Being a lower income country, the findings from Nepal can also potentially be extrapolated to other countries who are in a similar economic position.
+The results suggest that in Nepal there is indeed an inequality in mortality rate between children with different socioeconomic circumstances. While the data I used doesn’t capture many factors on an individual level, it provides an initial look on gap in health between people within Nepal. Being a lower income country, the findings from Nepal can also potentially be extrapolated to other countries who are in a similar economic position.
+
 
 # Data
 
-The data I used is collected by the Ministry of Health in Nepal (@D1). It was gathered through a two-step stratified sampling process. First regions in Nepal were chosen based on if they were considered rural or urban. Secondly, within those regions, subdivisions were given probabilities base on their population size, and 25 households were chosen. The table I analysed specifically is an aggregation of mortality of infants in different age groups and socioeconomic circumstances. Further description of the data is available in the provided in the datasheet located in the appendix.
+The data I used is collected by the Ministry of Health in Nepal (@D1). It was gathered through a two-step stratified sampling process. First, regions in Nepal were chosen based on if they were considered rural or urban. Secondly, within those regions, subdivisions were given probabilities proportional to their population size. Finally 25 households were chosen from each region. The table I analysed specifically is an aggregation of mortality of children in different age groups and socioeconomic circumstances. Further description of the data is available in the datasheet located in the appendix.
 
 The software I used to conduct analysis was R [@citeR] along with following packages: kableExtra [@p1], reshape2 [@p2], ggplot2 [@p3], tidyverse [@p4], and haven [@p5].
 
@@ -51,49 +52,49 @@ df <- readr::read_csv("/Users/aauveek/Documents/stats/304/SocioEconomicChildMort
 
 ## Important Variables
 
-* InfantAgeGroup: This captures the age group that the infant has passed away was in. The data is inherently grouped by the ages of infants. So this is an in important variable for context. 
+* InfantAgeGroup: This captures the age group that the child has passed in. The data is inherently grouped by the ages of children. So this is an in important variable for context. 
 
-* Urban: The mortality rates of infants in urban regions.
+* Urban: The mortality rates of children in urban regions.
 
-* Rural: The mortality rates of infants in rural regions.
+* Rural: The mortality rates of children in rural regions.
 
 The above 2 variables are important because they indirectly capture the socioeconomic differences between types of residence. For e.g., people urban regions may have better access to health care, and generally be wealthier than people in rural regions.
 
-* Primary: The Mortality rates of infants whose mothers have graduated primary school.
+* Primary: The Mortality rates of children whose mothers have graduated primary school.
 
-* Secondary+: The Mortality rates of infants whose mothers have graduated secondary school or higher.
+* Secondary+: The Mortality rates of children whose mothers have graduated secondary school or higher.
 
-* No Education: The Mortality rates of infants whose mothers have not graduated primary school.
+* No Education: The Mortality rates of children whose mothers have not graduated primary school.
 
-The above 3 variables indicate the literacy rate of the mothers of the infants. This is an important socioeconomic factor related to MORTALITY RATES as discussed previously.
+The above 3 variables indicate the literacy rate of the mothers of the children. This is an important socioeconomic factor related to MORTALITY RATES as discussed previously.
 
-* Mountain: The Mortality rates of infants in the mountainous regions of Nepal.
+* Mountain: The Mortality rates of children in the mountainous regions of Nepal.
 
-* Hill: The Mortality rates of infants in the hilly regions of Nepal.
+* Hill: The Mortality rates of children in the hilly regions of Nepal.
 
-* Terai: The Mortality rates of infants in the terai (flatland) regions of Nepal.
+* Terai: The Mortality rates of children in the terai (flatland) regions of Nepal.
 
-The data contains mortality rates grouped by different ecological regions specifically to Nepal. There are different socioeconomic circumstances (such as accessibility to health care, education or water) that may play a part in these regions and therefore these variables are important as well.
+The above 3 variables contain mortality rates grouped by different ecological regions specifically to Nepal. There are different socioeconomic circumstances (such as accessibility to health care, education or water) that may play a part in these regions and therefore these variables are important as well.
 
-* Eastern: The Mortality rates of infants in the eastern regions of Nepal.
+* Eastern: The Mortality rates of children in the eastern regions of Nepal.
 
-* Central: The Mortality rates of infants in the central regions of Nepal.
+* Central: The Mortality rates of children in the central regions of Nepal.
 
-* Western: The Mortality rates of infants in the western regions of Nepal.
+* Western: The Mortality rates of children in the western regions of Nepal.
 
-* Mid-western: The Mortality rates of infants in the mid-western regions of Nepal.
+* Mid-western: The Mortality rates of children in the mid-western regions of Nepal.
 
-* Far.western: The Mortality rates of infants in the far-western regions of Nepal.
+* Far.western: The Mortality rates of children in the far-western regions of Nepal.
 
-The data contains mortality rates grouped by different geographical regions specifically to Nepal. There are different socioeconomic circumstances (such as the income and education) that may different in between regions and therefore these variables are important as well.
+The above 5 variables contain mortality rates grouped by different geographical regions specifically to Nepal. There are different socioeconomic circumstances (such as the income and education) that may be different in between regions and therefore these variables are important as well.
 
-* No antenatal or delivery care: The mortality rates of infants who have received no antenatal or delivery care.
+* No antenatal or delivery care: The mortality rates of children who have received no antenatal or delivery care.
 
-* Either antenatal or delivery care: The mortality rates of infants who have received either antenatal or delivery care.
+* Either antenatal or delivery care: The mortality rates of children who have received either antenatal or delivery care.
 
-* Both antenatal and delivery care: The mortality rates of infants who have received both antenatal and delivery care.
+* Both antenatal and delivery care: The mortality rates of children who have received both antenatal and delivery care.
 
-These variables are directly associated with infant health, but the data is incomplete for these. Therefore, we will not be analysing these for this study.
+The above 2 variables are directly associated with infant health, but the data is incomplete for these. Therefore, we will not be analysing these for this study.
 
 To follow, I will be providing the mean mortality rates of the different variables along with the comparison of variables with each other. 
 
@@ -115,55 +116,61 @@ knitr::kable(mean_table, caption = "Mean Mortality Rates of Selected Socio-econo
 
 
 
-Table 1 contains the mean mortality child rates for each variable. We can see at glance that there are indeed differences in mortality rates between types of residence, ecological regions, and geographical regions.  
+Table 1 contains the mean child mortality rates for each variable. We can see at glance that there are indeed differences in mortality rates between types of residence, ecological regions, and geographical regions:  
 
 * Urban regions have lower mortality than rural ones. 
 *	Children whose mothers have a higher level of education have lower mortality rates.
 *	Hilly regions have lower mortality than Terai regions, who have lower mortality than mountainous regions.
 *	The mortality of geographical regions is ascending in this order: Eastern, Western, Central, Mid-Western, Far Western. 
 
-Whether these differences are only in the mean mortality rate or for all age groups must be analysed further. 
-
-Supplementing the mean table, I will be displaying the distribution of mortality rates by age group of the variables in comparison with each other.
+Whether these differences are only in the mean mortality rate or for all age groups must be analysed further. Supplementing the mean table, I will be displaying the distribution of mortality rates by age group of the variables in comparison with each other.
 
 ```{r, message = FALSE, echo=FALSE, error=FALSE, warning=FALSE}
 selected_df <- select(df, Urban, Rural, InfantAgeGroup)
 df3 <- melt(selected_df, id.vars='InfantAgeGroup')
 ggplot(df3, aes(x=InfantAgeGroup, y=value, fill=variable)) +
-  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + ggtitle("Plot 1: Mortality Rates of Infants by Residence Type") + guides(fill=guide_legend(title="Residence")) + ylab("Mortality Rate (Death per 1000)") 
+  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + ggtitle("Plot 1: Mortality Rates of children by Residence Type") + guides(fill=guide_legend(title="Residence")) + ylab("Mortality Rate (Death per 1000)") 
 
 selected_df <- select(df, "Primary", "Secondary+", "No Education", "InfantAgeGroup")
 df3 <- melt(selected_df, id.vars='InfantAgeGroup')
 ggplot(df3, aes(x=InfantAgeGroup, y=value, fill=variable)) +
-  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + guides(fill=guide_legend(title="Education")) + ylab("Mortality Rate (Death per 1000)") + ggtitle("Plot 2: Mortality Rates of Infants by Education Level")
+  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + guides(fill=guide_legend(title="Education")) + ylab("Mortality Rate (Death per 1000)") + ggtitle("Plot 2: Mortality Rates of children by Education Level")
 
 selected_df <- select(df,  "Mountain" ,"Hill", "Terai", "InfantAgeGroup")
 df3 <- melt(selected_df, id.vars='InfantAgeGroup')
 ggplot(df3, aes(x=InfantAgeGroup, y=value, fill=variable)) +
-  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + guides(fill=guide_legend(title="Ecological Region")) + ylab("Mortality Rate (Death per 1000)") + ggtitle("Plot 3: Mortality Rates of Infants by Ecologicial Region")
+  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + guides(fill=guide_legend(title="Ecological Region")) + ylab("Mortality Rate (Death per 1000)") + ggtitle("Plot 3: Mortality Rates of children by Ecologicial Region")
 
 selected_df <- select(df, "Eastern","Central","Western","Mid-western","Far.western","InfantAgeGroup")
 df3 <- melt(selected_df, id.vars='InfantAgeGroup')
 ggplot(df3, aes(x=InfantAgeGroup, y=value, fill=variable)) +
-  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + guides(fill=guide_legend(title="Geographical Region")) + ylab("Mortality Rate (Death per 1000)") + ggtitle("Plot 4: Mortality Rates of Infants by Geographical Region")
+  geom_bar(stat='identity', position='dodge') + scale_x_discrete(guide = guide_axis(n.dodge=3)) + guides(fill=guide_legend(title="Geographical Region")) + ylab("Mortality Rate (Death per 1000)") + ggtitle("Plot 4: Mortality Rates of children by Geographical Region")
 
   
 ```
 
 
+### Plot 1
+
 Plot 1 shows the mortality rate of different age groups by residence type. We can see that in most age groups the MORTALITY RATE in rural regions is higher. However, the mortality rate of the “under 5” age group is significantly higher in urban regions. This is an outlier.
+
+### Plot 2
 
 Plot 2 shows the mortality rate of different age groups by the mother’s education level. We can see that for the lower age groups, MORTALITY RATE is lowest if their mothers have a secondary or higher level of education. However interestingly, this is not found for children in higher age groups. Children who have mothers with “no education” surprisingly have the lowest mortality rates if they are in the under 5 age group.
 
+### Plot 3
+
 Plot 3 shows the mortality rate of different age groups by Ecological Region. We see that there are no generalizable differences in the MORTALITY RATEs of age groups grouped by their ecological region.  Overall mountainous regions seem to have the highest, however for the “infant” age group, it has the lowest mortality rates. 
+
+### Plot 4
 
 Plot 4 shows the mortality rate of different age groups by Geographical Region. We can see that in general eastern, western, and central regions have lower mortality rates than mid-western and far-western regions. However surprisingly for the infant age group, they have a higher rate. This is similar finding to the grouping by ecological region and may be due to the same factors.
 
-After looking at these distributions of mortality rates by age groups and comparing the socioeconomic variables, we must determine whether these differences are significant. This is what I will do in the results section. 
+After looking at these distributions of mortality rates by age groups and comparing the socioeconomic variables, we must determine whether these differences are significant. I will be conducting statistical tests to determine the sigificance of these findings.
 
 # Results
 
-To identify the statistically significant effect of socioeconomic factors on mortality rates I will be conducting t-tests between the variables. Since the data is limited, I will be using one-side tails with a significance level of 90% to determine if the mortality rate of one variable is lower or higher than another. A p-value of less than 0.1 will contradict the null hypothesis and confirm the alternate hypothesis that 1 variable has a higher mortality rate than another. 
+To identify the statistically significant effect of socioeconomic factors on mortality rates I will be conducting t-tests between the variables. Since the data is limited, I will be using one-sided tails with a significance level of 90% to determine if the mortality rate of one variable is lower or higher than another. A p-value of less than 0.1 will contradict the null hypothesis and confirm the alternate hypothesis that 1 variable has a higher mortality rate than another. 
 
 ```{r, message = FALSE, echo=FALSE, error=FALSE, warning=FALSE}
 ttest_df <- data.frame(matrix(ncol = 4, nrow = 0))
@@ -233,8 +240,8 @@ Table 2 contains the results of these tests. The interpretation of the data in t
 
 ### Mothers Education Level
 
-1.	We see that the mortality rates of children with mothers that have an education level of secondary or higher is significantly lower than the mortality rates or infants with mothers that have no education. 
-2.	However, there is no significant differences in the mortality rates of other education levels. It is important to note that this may be due to the lack of data as the p-values are still close to 0.1.
+1. We see that the mortality rates of children with mothers that have an education level of secondary or higher is significantly lower than the mortality rates or children with mothers that have no education. 
+2. However, there is no significant differences in the mortality rates of other education levels. It is important to note that this may be due to the lack of data as the p-values are still close to 0.1.
 
 ### Type of Residence
 
@@ -242,50 +249,49 @@ We see that mortality rates in Urban residences are significantly lower than mor
 
 ### Ecological Region
 
-1.	There are no significant differences in mortality rates between ecological regions.
-2.	 However, it is important to note that this may be due to lack of individual data, as the p-values of mountainous vs hill and terai are close to 0.1. The mortality rates of mountainous regions may indeed be higher due to socioeconomic factors.
+1.There are no significant differences in mortality rates between ecological regions.
+2.However, it is important to note that this may be due to lack of individual data, as the p-values of mountainous vs hill and terai are close to 0.1. The mortality rates of mountainous regions may indeed be higher due to socioeconomic factors.
 
 ### Geographical Region
 
-1.	There are no significant differences in mortality rates between geographical regions. 
-2.	However, it is important to note that this may be due to lack of individual data, as the p-values of Eastern and Western vs Mid-western and Far-western are close to 0.1. The mortality rates of Mid-Western and Far-Western regions may indeed be higher due to socioeconomic factors.
-
+1. There are no significant differences in mortality rates between geographical regions. 
+2. However, it is important to note that this may be due to lack of individual data, as the p-values of Eastern and Western vs Mid-western and Far-western are close to 0.1. The mortality rates of Mid-Western and Far-Western regions may indeed be higher due to socioeconomic factors.
 
 # Discussion
 
-The society that we live in is not fair. Humans who are born into a live of socioeconomic privilege are much more equipped to succeed in life than humans who are not. The scientific advancements made in medicine closed some these gaps in livelihood between humans of different socioeconomic groups. One specific benefit from these advancement over the last century was the steady reduction of infant mortality rates. However there remains a gap between higher and lower income countries. 
+The society that we live in is not fair. Humans who are born into a life of socioeconomic privilege are much more equipped to succeed in life than humans who are not. The scientific advancements made in medicine closed some these gaps in livelihood between different socioeconomic groups. One specific benefit from these advancement over the last century was the steady reduction of infant mortality rates. However there still remains a large gap between higher and lower income countries. 
 
-In the paper by [@1] they have found that 3 socioeconomic variables predicted 92% of the variation of national IMR at the global level. These factors re GNI, Income Distribution and Female Illiteracy Rates.  In lower- and middle-income countries specifically, they found that Female Illiteracy Rates and Income Distribution played the biggest part in IMR. Suggesting that these socioeconomic factors are either direct- or indirect- causally responsibly for IMRs. They concluded that policy makers should focus on causes like these on the micro level to improve the general health of the nation.
+In the paper by [@1] they have found that 3 socioeconomic variables predicted 92% of the variation of national IMR at the global level. These factors are GNI, Income Distribution and Female Illiteracy Rates. In lower- and middle-income countries specifically, they found that Female Illiteracy Rates and Income Distribution played the biggest part in IMR. Suggesting that these socioeconomic factors are either direct- or indirect- causally responsibly for IMRs. They concluded that policy makers should focus on causes like these on the micro level to improve the general health of the nation.
 
-To extend the previous study, in this paper I explored the effect of socioeconomic factors on child mortality rates within the country of Nepal. Nepal being a lower income country itself can provide insight into the aspects of child mortality in other lower income countries as well. My hypothesis in the study was that socio-economic factors will indeed influence child mortality in Nepal. Specifically, following the results of the study by [@1], I predicted that the education level of the mothers of children will have a significant impact on child mortality. 
+To extend the previous study, in this paper I explored the effect of socioeconomic factors on child mortality rates within the country of Nepal. Nepal being a lower income country itself can provide insight into the aspects of child mortality in other lower income countries as well. My hypothesis in the study was that socio-economic factors will indeed influence child mortality in Nepal. Specifically, following the results of the study by [@1], I predicted that socio-economic circumstances related to higher income will lead to lower child mortality rates. For example, the education level of the mothers of children will have a significant impact on child mortality. 
 
-In order to study this, I used data collected by the Nepal ministry of health in 1996 [@D1] and created a dataset containing the mortality rates grouped by different socio-economic circumstances (variables). 
+In order to conduct this study, I used data collected by the Nepal ministry of health in 1996 [@D1] and created a dataset containing the mortality rates grouped by different socio-economic variables. 
 
-I began the analysis by looking at the mean child mortality rates of different socioeconomic variables. These means are essentially capturing the weighted average of child mortality rates; with each age group being give the same weight. Therefore, they do not represent the actual population mean of mortality rates for each socioeconomic variable. 
+I began the analysis by looking at the mean child mortality rates of different socioeconomic variables. These means are essentially capturing the weighted average of child mortality rates; with each age group being give the same weight. Therefore, they do not represent the actual population means. 
 
-Several interesting findings can be seen from these means. Aligning with my hypothesis, the higher the education level of the mother the lower the mortality rate (i.e., Secondary+ < Primary < No Education). In addition, urban regions also have a lower mean child mortality rate than rural ones. This also aligns with my hypothesis since urban regions generally have a higher income than rural ones. Lastly, different geographical and ecological regions also had different mortality. Although it cannot be conclusively said whether this aligns with my hypothesis, the income distribution in these regions may be different from each other. Thus, resulting in different socioeconomic factors which affect child mortality.
+Several interesting findings can be seen from these means. Aligning with my hypothesis, the higher the education level of the mother, the lower the mortality rate (i.e., Secondary+ < Primary < No Education). In addition, urban regions also have a lower mean child mortality rate than rural ones. This also aligns with my hypothesis since urban regions generally have a higher income than rural ones. Lastly, different geographical and ecological regions also had different mortality. Although it cannot be conclusively said whether this aligns with my hypothesis, the income distribution in these regions may be different from each other. Thus, resulting in different socioeconomic factors which affect child mortality.
 
-Probing deeper into the relationship between the variables I plotted the mortality rate of different age groups by groups of variables. 
+Probing deeper into the relationship between the variables, I plotted the distribution mortality rate of different age groups in a bar graph that compares groups of variables. 
 
-The first group being residence type. The plot shows that urban regions do indeed have a lower mortality rate than rural regions almost all age groups, aligning with my hypothesis. However, the mortality rate in the “under 5” age group is significantly higher in urban regions. This may be due to non-socioeconomic factors. The general reasons which lead to child mortality for lower ages may not apply to higher age groups.
-
-The second grouping of variables I plotted were the mother’s education level. As hypothesized, children with mothers who have a higher education level have lower mortality rates. However, like the finding in the residence type plot, the higher age group of “under 5” do not share the finding. 
+The first group being residence type. The plot shows that urban regions do indeed have a lower mortality rate than rural regions almost all age groups, aligning with my hypothesis. However, the mortality rate in the “under 5” age group is significantly higher in urban regions. This may be due to non-socioeconomic factors. The general reasons which lead to child mortality for lower ages may not apply to higher age groups. The second grouping of variables I plotted were the mother’s education level. As hypothesized, children with mothers who have a higher education level have lower mortality rates. However, like the finding in the residence type plot, the higher age group of “under 5” do not share the finding. 
 
 The other two grouping of variables I plotted were ecological region and geographical region. In these groupings I could not see any significant differences of child mortality rates. For example, overall mountainous regions seem to have the highest mortality rates, however for the infant age group they have the lowest.  
 
-While simply looking at the differences in mortality rates between different socioeconomic variables provided me an initial insight. It did allow me to make any conclusions. Therefore, to determine whether the actual differences between the groupings of variables were significant, I used t-tests. 
+While simply looking at the differences in mortality rates between different socioeconomic variables provided me an initial insight. It did not allow me to make any conclusions. Therefore, to determine whether the actual differences between the groupings of variables were significant, I conducted pearson's t-tests. 
 
-The findings for the t-tests of the mother’s education level show that mothers who have a secondary or higher level of education result in a significantly lower child mortality than mothers with no education. However, no significant findings were shown between primary level of education and no education. The latter lack of finding may be due to the limitation of the data; the table only contains grouped information and consists of only 5 rows. The former confirmation of the hypothesis can be explained through various attributes related to having a higher education. Indirectly, if you have a higher level of education, you are more likely to be in a higher economic group. Thus, having better access to medicine and other direct preventers of child mortality. 
+The findings for the t-tests of the mother’s education level show that mothers who have a secondary or higher level of education have significantly lower child mortality rates than mothers with no education. However, no significant findings were shown between primary level of education and no education.  The confirmation of the hypothesis can be explained through various attributes related to having a higher education. Indirectly, if you have a higher level of education, you are more likely to be in a higher economic group. Thus, having better access to medicine and other direct preventers of child mortality. The latter lack of finding (primary and no education) may be due to the limitation of the data; the table only contains grouped information and consists of only 5 rows.
 
-To add, the findings for the t-tests of the type of residence show that urban residences do have significantly lower child mortality rates than rural residences, aligning with my hypothesis. As previously mentioned, this may be due to the socioeconomic differences between urban and rural regions. However, a plethora of other socioeconomic factors not available in this dataset may also be responsible. 
+To add, the findings for the t-tests of the type of residence show that urban residences do have significantly lower child mortality rates than rural residences, aligning with my hypothesis. As previously mentioned, this may be due to the socioeconomic differences between urban and rural regions. However, a plethora of other socioeconomic factors not available in this dataset may also be responsible for this difference. 
 
-Lastly, the findings for the t-tests of the ecological and geographical regions do not show any significant results, contradictory to my hypothesis. Nevertheless, this can also be attributed as a limitation of the dataset. Since the data does not contain enough records, and is not on the individual level, t-tests will not be able to capture the true distribution of the variables. Therefore, we cannot conclude whether the lack of findings is true.
+Lastly, the findings for the t-tests of the ecological and geographical regions do not show any significant results; contradictory to my hypothesis. Nevertheless, this can also be attributed as a limitation of the dataset. Since the data does not contain enough records, and is not on the individual level, t-tests will not be able to capture the true distribution of the variables. Therefore, we cannot conclude whether the lack of findings is true.
 
-Overall, the statistical analysis of the variables has been in line with my hypothesis. However, a major limitation of this study is the lack of extensive data on the individual level. Since the table I extracted data from was already grouped by age-group, the actual distribution of the sample could not be used for any t-tests. 
+Overall, the statistical analysis of the variables has been in line with my hypothesis. However, a major limitation of this study is the lack of extensive data on the individual level. Since the table I extracted data from was already grouped by age, the actual distribution of the sample could not be used for any t-tests. Another limitation resulting from the dataset is that only a handful of socioeconomic variables are recorded. 
 
-Another limitation resulting from the dataset is that there was only a handful of socioeconomic variables recorded. A future study should attempt to capture a larger plethora of factors such as income, education, employment, community safety, and social supports and analyse their relationship with child mortality rates. Sampling should also be stratified to accommodate enough subjects within each socioeconomic circumstance. It is important to have a larger array of variables in order to determine which variables are independently responsible for the variation in child mortality (one variable may become obsolete when another is taken into account). 
+To conclude, although limited by the available dataset, this initial analysis validated that the claim "socioeconomic factors have an effect on child mortality rates" can be applied to Nepal.
 
-\newpage
+A future study should attempt to capture a larger plethora of factors such as income, education, employment, community safety, and social supports and analyse their relationship with child mortality rates. Sampling should be stratified to accommodate enough subjects within each socioeconomic circumstance. It is important to have a larger array of variables in order to determine which variables are independently responsible for the variation in child mortality (one variable may become obsolete when another is taken into account). 
+
+\hfill \break \hfill \break 
 
 ## Bibliography
 
