@@ -1,0 +1,29 @@
+---
+title: "Socioeconomic determinants of Child Mortality Rate in Nepal"
+author: Anindya Auveek
+subtitle: "https://github.com/anind99/paper4"
+date: "03, 22, 2022"
+output: pdf_document
+bibliography: references.bib
+abstract: 
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+biblio-style: apsr
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, message = FALSE, include=FALSE, error=FALSE}
+library(haven)
+library(tidyverse)
+library(ggplot2)
+library(reshape2)
+library(kableExtra)
+```
+
+
+
+
